@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Bézier Curve Simulator</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="img/einstein.png">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                Bézier Physics
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Simulator</a>
+                <a href="about.html" class="nav-link">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="header-section">
+                <h1>Interactive Bézier Curve Simulator</h1>
+                <p class="subtitle">Drag control points to see physics-based rope behavior | All math implemented from scratch</p>
+            </div>
+            
+            <div class="canvas-container">
+                <canvas id="canvas"></canvas>
+            </div>
+            
+            <div class="controls">
+                <div class="control-group">
+                    <label>
+                        Spring Stiffness (k)
+                        <span class="value-display" id="stiffness-val">0.15</span>
+                    </label>
+                    <input type="range" id="stiffness" min="0.05" max="0.5" step="0.01" value="0.15">
+                </div>
+                
+                <div class="control-group">
+                    <label>
+                        Damping
+                        <span class="value-display" id="damping-val">0.85</span>
+                    </label>
+                    <input type="range" id="damping" min="0.5" max="0.99" step="0.01" value="0.85">
+                </div>
+                
+                <div class="control-group">
+                    <label>
+                        Tangent Density
+                        <span class="value-display" id="tangents-val">12</span>
+                    </label>
+                    <input type="range" id="tangents" min="5" max="30" step="1" value="12">
+                </div>
+                
+                <div class="control-group">
+                    <label>
+                        Curve Resolution
+                        <span class="value-display" id="resolution-val">100</span>
+                    </label>
+                    <input type="range" id="resolution" min="50" max="200" step="10" value="100">
+                </div>
+            </div>
+
+            <div class="button-controls">
+                <button class="btn btn-primary" onclick="resetSimulation()">Reset Simulation</button>
+                <button class="btn btn-secondary" onclick="toggleAnimation()"><span id="anim-text">Pause</span> Animation</button>
+            </div>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-label">FPS</div>
+                    <div class="stat-value" id="fps">60</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Curve Points</div>
+                    <div class="stat-value" id="points">100</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Tangent Vectors</div>
+                    <div class="stat-value" id="tangent-count">12</div>
+                </div>
+            </div>
+
+            <div class="info">
+                <strong>💡 Instructions:</strong> Drag the red control points (P1 and P2) with your mouse. 
+                The curve behaves like a springy rope! Endpoints are fixed. All Bézier math and physics implemented manually.
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Bézier Physics Simulator</p>
+    </footer>
+
+    <script src="js/bezier.js"></script>
+</body>
+</html>
+

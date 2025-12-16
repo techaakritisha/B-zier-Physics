@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Bézier Physics</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="img/einstein.png">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                Bézier Physics
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Simulator</a>
+                <a href="about.html" class="nav-link">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container about-page">
+            <h1>About This Project</h1>
+            
+            <section class="about-section">
+                <h2>📐 Mathematical Implementation</h2>
+                <p>This simulator implements a <strong>cubic Bézier curve</strong> using the mathematical formula:</p>
+                <div class="formula">
+                    B(t) = (1-t)³P₀ + 3(1-t)²tP₁ + 3(1-t)t²P₂ + t³P₃
+                </div>
+                <p>Where P₀, P₁, P₂, P₃ are the four control points and t ranges from 0 to 1.</p>
+            </section>
+
+            <section class="about-section">
+                <h2>🔬 Physics Model</h2>
+                <p>The control points use a <strong>spring-damping model</strong> for realistic motion:</p>
+                <div class="formula">
+                    acceleration = -k × (position - target) - damping × velocity
+                </div>
+                <ul>
+                    <li><strong>k</strong>: Spring stiffness coefficient</li>
+                    <li><strong>damping</strong>: Velocity damping factor</li>
+                    <li>Creates smooth, rope-like behavior</li>
+                </ul>
+            </section>
+
+            <section class="about-section">
+                <h2>📊 Tangent Vectors</h2>
+                <p>Tangents are computed using the derivative of the Bézier curve:</p>
+                <div class="formula">
+                    B'(t) = 3(1-t)²(P₁-P₀) + 6(1-t)t(P₂-P₁) + 3t²(P₃-P₂)
+                </div>
+                <p>Normalized tangent vectors show the direction of the curve at each point.</p>
+            </section>
+
+            <section class="about-section">
+                <h2>💻 Technical Stack</h2>
+                <ul>
+                    <li><strong>Frontend</strong>: HTML5, CSS3, Vanilla JavaScript</li>
+                    <li><strong>Rendering</strong>: HTML5 Canvas with requestAnimationFrame</li>
+                    <li><strong>Performance</strong>: 60+ FPS with optimized rendering</li>
+                    <li><strong>No external libraries</strong> - All math from scratch</li>
+                </ul>
+            </section>
+
+            <section class="about-section">
+                <h2>🎯 Features</h2>
+                <ul>
+                    <li>Real-time interactive control point manipulation</li>
+                    <li>Spring-damping physics simulation</li>
+                    <li>Tangent vector visualization</li>
+                    <li>Adjustable physics parameters</li>
+                    <li>Performance monitoring (FPS counter)</li>
+                    <li>Beautiful gradient rendering</li>
+                </ul>
+            </section>
+
+            <a href="index.html" class="btn btn-primary">← Back to Simulator</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Bézier Physics Simulator</p>
+    </footer>
+</body>
+</html>
+
