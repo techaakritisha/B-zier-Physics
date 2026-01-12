@@ -73,15 +73,6 @@ B'(t) = 3(1−t)²(P₁−P₀) + 6(1−t)t(P₂−P₁) + 3t²(P₃−P₂)
 
 ---
 
-## 🖥️ Rendering & Performance
-
-- Rendering is done using **HTML5 Canvas**
-- Animation loop uses `requestAnimationFrame`
-- DPI-aware canvas scaling for sharp visuals
-- FPS counter included for performance monitoring
-
----
-
 ## 🚫 Constraints Followed
 
 - ❌ No Bézier libraries
@@ -95,8 +86,7 @@ B'(t) = 3(1−t)²(P₁−P₀) + 6(1−t)t(P₂−P₁) + 3t²(P₃−P₂)
 
 - **HTML5**
 - **CSS3**
-- **Vanilla JavaScript**
-- **HTML Canvas**
+- **JavaScript**
 
 ---
 
