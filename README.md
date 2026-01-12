@@ -17,7 +17,7 @@ The goal of this project is to demonstrate understanding of:
 - Real-time interaction handling
 - Basic spring–damping physics
 - Tangent (derivative) visualization
-- Canvas-based rendering at 60 FPS
+- Canvas-based rendering at 60 FPS.
 
 ---
 
